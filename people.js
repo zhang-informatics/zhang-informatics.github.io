@@ -5,7 +5,7 @@ document.addEventListener("DOMContentLoaded", function () {
             {
                 name: "Rui Zhang, PhD, FACMI, FIAHSI, FAMIA",
                 role: "Professor & Founding Chief, Division of Computational Health Sciences",
-                image: "" // placeholder
+                image: "assets/rui_zhang.png"
             }
         ],
         "Research Scientist & Postdoctoral Associate": [
