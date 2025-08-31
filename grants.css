@@ -1,0 +1,38 @@
+/* grants.css */
+.grant-list {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    margin-top: 16px;
+}
+
+.grant-card {
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+    padding: 20px;
+    border: 1px solid #ddd;
+}
+
+.grant-card h3 {
+    margin: 0 0 8px;
+    color: #0d47a1;
+    font-size: 1.2rem;
+}
+
+.grant-card p {
+    margin: 4px 0;
+    font-size: 0.95rem;
+    color: #444;
+}
+
+.grant-role,
+.grant-agency,
+.grant-dates,
+.grant-cost {
+    font-weight: 500;
+}
+
+.grant-cost {
+    color: #777;
+}
