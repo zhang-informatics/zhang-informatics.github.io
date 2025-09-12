@@ -3,6 +3,7 @@
         "year": "2025",
         "journal": "npj Artificial Intelligence",
         "title": "Large language models for disease diagnosis: a scoping review",
+        "tags": ["Review", "LLMs"],
         "authors": "Shuang Zhou, Zidu Xu, Mian Zhang, Chunpu Xu, Yawen Guo, Zaifu Zhan, Yi Fang, Sirui Ding, Jiashuo Wang, Kaishuai Xu, Liqiao Xia, Jeremy Yeung, Daochen Zha, Dongming Cai, Genevieve B. Melton, Mingquan Lin & Rui Zhang",
         "image": "data/shuang_zhou_ngj_AI_2025.png"
     },
@@ -10,6 +11,7 @@
         "year": "2025",
         "journal": "Research Square",
         "title": "Association of Physical Activity from Wearable Devices and Chronic Disease Risk: Insights from the All of Us Research Program",
+        "tags": ["Disease Prevent"],
         "authors": "Yu Hou, Erjia Cui, Kelvin Lim, Lisa Chow, Michael Howell, Sayeed Ikramuddin and Rui Zhang",
         "image": ""
     },
@@ -17,6 +19,7 @@
         "year": "2025",
         "journal": "Annals of Surgery",
         "title": "Predicting Weight Loss After Vertical Sleeve Gastrectomy Using a Whole-genome Sequencing–derived Polygenic Risk Score in the All of Us Cohort",
+        "tags": ["Genetic"],
         "authors": "Yu Hou, Daniel Leslie, Jinhua Wang, Rui Zhang, Sayeed Ikramuddin",
         "image": ""
     },
@@ -24,6 +27,7 @@
         "year": "2025",
         "journal": "Journal of medical Internet research",
         "title": "Improving dietary supplement information retrieval: Development of a retrieval-augmented generation system with large language models",
+        "tags": ["Knowledge Graph"],
         "authors": "Yu Hou, Jeffrey R Bishop, Hongfang Liu, Rui Zhang",
         "image": "data/yu_hou_idisk2_2025.png"
     },
@@ -31,6 +35,7 @@
         "year": "2024",
         "journal": "IEEE Transactions on Visualization and Computer Graphics",
         "title": "Knownet: Guided health information seeking from llms via knowledge graph integration",
+        "tags": ["Visualization"],
         "authors": "Youfu Yan, Yu Hou, Yongkang Xiao, Rui Zhang, Qianwen Wang",
         "image": "data/yu_hou_knownet_2024.png"
     },
@@ -38,6 +43,7 @@
         "year": "2024",
         "journal": "Journal of the American Medical Informatics Association",
         "title": "A review of reinforcement learning for natural language processing and applications in healthcare",
+        "tags": ["Review"],
         "authors": "Ying Liu, Haozhu Wang, Huixue Zhou, Mingchen Li, Yu Hou, Sicheng Zhou, Fang Wang, Rama Hoetzlein, Rui Zhang",
         "image": "data/ying_liu_reinforcement_learning_2024.png"
     },
@@ -45,6 +51,7 @@
         "year": "2024",
         "journal": "Scientific reports",
         "title": "Repurposing non-pharmacological interventions for Alzheimer's disease through link prediction on biomedical literature",
+        "tags": ["Knowledge Graph", "Link Prediction"],
         "authors": "Yongkang Xiao, Yu Hou, Huixue Zhou, Gayo Diallo, Marcelo Fiszman, Julian Wolfson, Li Zhou, Halil Kilicoglu, You Chen, Chang Su, Hua Xu, William G Mantyh, Rui Zhang",
         "image": "data/yongkang_xiao_adint_2024.png"
     }
