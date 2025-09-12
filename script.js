@@ -1,26 +1,16 @@
-// script.js
-document.addEventListener("DOMContentLoaded", () => {
-    // Load top 5 news
-    fetch("data/news.json")
-        .then((res) => res.json())
-        .then((data) => {
-            const newsList = document.getElementById("news-list");
-            data.slice(0, 5).forEach((item) => {
-                const li = document.createElement("li");
-                li.textContent = `${item.date} – ${item.title}`;
-                newsList.appendChild(li);
-            });
+// Load scrollable news into main page
+fetch("data/news.json")
+    .then((res) => res.json())
+    .then((data) => {
+        const scrollContainer = document.getElementById("news-scroll");
+        data.forEach((item) => {
+            const div = document.createElement("div");
+            div.className = "news-scroll-item";
+            div.innerHTML = `
+        <h4>${item.title}</h4>
+        <p class="news-date">${item.date}</p>
+        <p>${item.content || ""}</p>
+      `;
+            scrollContainer.appendChild(div);
         });
-
-    // Load top 5 publications
-    fetch("data/publications.json")
-        .then((res) => res.json())
-        .then((data) => {
-            const pubsList = document.getElementById("pubs-list");
-            data.slice(0, 5).forEach((item) => {
-                const li = document.createElement("li");
-                li.innerHTML = `<strong>${item.authors}</strong>. ${item.title}. <em>${item.journal}</em>, ${item.year}.`;
-                pubsList.appendChild(li);
-            });
-        });
-});
+    });

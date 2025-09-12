@@ -1,14 +1,16 @@
-// people.js
 document.addEventListener("DOMContentLoaded", function () {
     const data = {
         "Principal Investigator": [
             {
                 name: "Rui Zhang, PhD, FACMI, FIAHSI, FAMIA",
                 role: "Professor & Founding Chief, Division of Computational Health Sciences",
-                image: "assets/rui_zhang.png"
+                image: "assets/rui_zhang.png",
+                bio: `Dr. Zhang is a Professor in the Department of Surgery and Founding Chief of the Division of Computational Health Sciences. 
+                He is an internationally recognized expert in health informatics and clinical NLP. His research interests include clinical and consumer health NLP, knowledge graph construction, and real-world evidence generation. 
+                He is a Fellow of the American College of Medical Informatics (FACMI), International Academy of Health Sciences Informatics (FIAHSI), and American Medical Informatics Association (FAMIA).`
             }
         ],
-        "Research Scientist & Postdoctoral Associate": [
+        "Research Scientist": [
             { name: "Yu Hou, PhD", role: "Research Scientist", image: "assets/yu_hou.png" },
             { name: "Xiaoyi Chen", role: "Research Scientist", image: "assets/xiaoyi_chen.jpg" },
             { name: "Shuang Zhou, PhD", role: "Postdoctoral Associate", image: "" },
@@ -21,16 +23,16 @@ document.addEventListener("DOMContentLoaded", function () {
             { name: "Jeremy Yeung", role: "Programmer", image: "" }
         ],
         "PhD Students": [
-            { name: "Huixue Zhou", role: "PhD Candidate in Health Informatics", image: "" },
-            { name: "Yongkang Xiao", role: "PhD Student in Health Informatics", image: "" },
-            { name: "Meijia Song", role: "PhD Student in Nursing Informatics", image: "" },
-            { name: "Zaifu Zhan", role: "PhD Student in ECE", image: "" },
-            { name: "Yifan Wu", role: "PhD Student in Bioinformatics and Computational Biology", image: "" }
+            { name: "Huixue Zhou", role: "PhD Candidate", image: "" },
+            { name: "Yongkang Xiao", role: "PhD Student", image: "" },
+            { name: "Meijia Song", role: "PhD Student", image: "" },
+            { name: "Zaifu Zhan", role: "PhD Student", image: "" },
+            { name: "Yifan Wu", role: "PhD Student", image: "" }
         ],
         "Master Students": [
-            { name: "Navanshu Khare", role: "Master Student (Data Science)", image: "" },
-            { name: "Shifa Siddiqui", role: "Master Student (Data Science)", image: "" },
-            { name: "SriHarshitha Anuganti", role: "Master Student (Data Science)", image: "" }
+            { name: "Navanshu Khare", role: "MS Student", image: "" },
+            { name: "Shifa Siddiqui", role: "MS Student", image: "" },
+            { name: "SriHarshitha Anuganti", role: "MS Student", image: "" }
         ],
         "Alumni": {
             "Programmer": ["Mingchen Li, MS", "Datlon Schutter, BA", "Jake Vasilakes, MS"],
@@ -45,39 +47,49 @@ document.addEventListener("DOMContentLoaded", function () {
 
     const container = document.getElementById("people-container");
 
-    Object.entries(data).forEach(([sectionTitle, items]) => {
-        const sec = document.createElement("section");
-        const h2 = document.createElement("h2");
-        h2.textContent = sectionTitle;
-        sec.appendChild(h2);
+    Object.entries(data).forEach(([sectionTitle, members]) => {
+        const section = document.createElement("section");
+        section.innerHTML = `<h2>${sectionTitle}</h2>`;
 
         if (sectionTitle !== "Alumni") {
             const grid = document.createElement("div");
             grid.className = "person-grid";
-            items.forEach((p) => {
+
+            members.forEach((p) => {
                 const card = document.createElement("div");
-                card.className = "person-card";
-                card.innerHTML = `
-          <div class="person-photo">${p.image ? `<img src="${p.image}" alt="${p.name}">` : ""}</div>
-          <div class="person-info">
-            <h3>${p.name}</h3>
-            <p>${p.role}</p>
-          </div>`;
+                if (sectionTitle === "Principal Investigator" && p.name.includes("Rui Zhang")) {
+                    card.className = "person-card-horizontal";
+                    card.innerHTML = `
+            <div class="person-photo-large">${p.image ? `<img src="${p.image}" alt="${p.name}">` : ""}</div>
+            <div class="person-bio">
+              <h3>${p.name}</h3>
+              <p class="role">${p.role}</p>
+              <p class="bio-text">${p.bio}</p>
+            </div>`;
+                } else {
+                    card.className = "person-card";
+                    card.innerHTML = `
+            <div class="person-photo">${p.image ? `<img src="${p.image}" alt="${p.name}">` : ""}</div>
+            <div class="person-info">
+              <h3>${p.name}</h3>
+              <p>${p.role}</p>
+            </div>`;
+                }
                 grid.appendChild(card);
             });
-            sec.appendChild(grid);
+            section.appendChild(grid);
         } else {
-            Object.entries(items).forEach(([subGroup, list]) => {
+            Object.entries(members).forEach(([subgroup, names]) => {
                 const sub = document.createElement("div");
-                sub.innerHTML = `<h3>${subGroup}</h3><ul>${list.map(name => `<li>${name}</li>`).join('')}</ul>`;
-                sec.appendChild(sub);
+                sub.innerHTML = `<h3>${subgroup}</h3><ul>${names.map(n => `<li>${n}</li>`).join('')}</ul>`;
+                section.appendChild(sub);
             });
         }
 
-        container.appendChild(sec);
+        container.appendChild(section);
     });
 });
 
 function scrollToTop() {
-    window.scrollTo({ top: 0, behavior: 'smooth' });
+    window.scrollTo({ top: 0, behavior: "smooth" });
 }

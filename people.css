@@ -1,54 +1,91 @@
-/* committee.css */
-h2 {
-    color: #003366;
-    border-bottom: 2px solid #003366;
-    padding-bottom: 4px;
-    margin-top: 30px;
+#people-container {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  padding: 20px;
+}
+
+section {
+  margin-bottom: 40px;
+}
+
+section > h2 {
+  font-size: 24px;
+  color: #333;
+  border-bottom: 2px solid #ddd;
+  padding-bottom: 5px;
+  margin-bottom: 15px;
 }
 
 .person-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
-    gap: 20px;
-    margin-top: 16px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
 }
 
-.person-card {
-    background: #fff;
-    border: 1px solid #ddd;
-    border-radius: 8px;
-    padding: 10px;
-    text-align: center;
-    transition: box-shadow 0.2s ease;
+.person-card, .person-card-horizontal {
+  background-color: #f8f8f8;
+  border-radius: 10px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 15px;
+  width: 150px;
+  text-align: center;
 }
 
-.person-card:hover {
-    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+.person-card-horizontal {
+  flex-direction: row;
+  width: 100%;
+  max-width: 1000px;
+  align-items: flex-start;
+  gap: 20px;
 }
 
-.person-photo {
-    height: 120px;
-    margin-bottom: 8px;
+.person-photo img, .person-photo-large img {
+  width: 100%;
+  height: auto;
+  border-radius: 50%;
+  object-fit: cover;
+  aspect-ratio: 4 / 5;
+  object-position: center top;
 }
 
-.person-photo img {
-    max-height: 100%;
-    max-width: 100%;
-    border-radius: 50%;
+.person-photo-large {
+  width: 200px;
+  flex-shrink: 0;
 }
 
-.person-info h3 {
-    margin: 6px 0 2px;
-    font-size: 16px;
+.person-info {
+  margin-top: 10px;
 }
 
-.person-info p {
-    font-size: 14px;
-    color: #555;
+.person-info h3, .person-bio h3 {
+  margin: 0;
+  font-size: 18px;
 }
 
-section ul {
-    list-style-type: disc;
-    padding-left: 20px;
-    margin-top: 8px;
+.person-info p, .person-bio p {
+  font-size: 14px;
+  color: #555;
+}
+
+.person-bio {
+  flex: 1;
+}
+
+.bio-text {
+  margin-top: 10px;
+  line-height: 1.6;
+  font-size: 15px;
+}
+
+ul {
+  padding-left: 20px;
+}
+
+ul li {
+  margin-bottom: 5px;
 }
