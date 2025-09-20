@@ -36,3 +36,19 @@
 .grant-cost {
     color: #777;
 }
+
+.grant-card a.grant-link {
+    text-decoration: none;
+    color: inherit;
+}
+
+.grant-card a.grant-link h3 {
+    color: #0d47a1;
+    transition: color 0.2s ease;
+}
+
+.grant-card a.grant-link h3:hover {
+    color: #003366;
+    text-decoration: underline;
+    cursor: pointer;
+}
