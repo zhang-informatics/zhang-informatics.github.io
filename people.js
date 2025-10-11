@@ -12,22 +12,22 @@ document.addEventListener("DOMContentLoaded", function () {
         ],
         "Research Scientist": [
             { name: "Yu Hou, PhD", role: "Research Scientist", image: "assets/yu_hou.png" },
-            { name: "Xiaoyi Chen", role: "Research Scientist", image: "assets/xiaoyi_chen.jpg" },
+            { name: "Xiaoyi Chen, PhD", role: "Research Scientist", image: "assets/xiaoyi_chen.jpg" },
             { name: "Shuang Zhou, PhD", role: "Postdoctoral Associate", image: "assets/shuang_zhou.jpg" },
             { name: "Jia Li, PhD", role: "Postdoctoral Associate", image: "assets/jia_li.jpg" },
-            { name: "Jun Wang", role: "Postdoctoral Associate", image: "assets/jun_wang.jpg" },
-            { name: "Kai Yu", role: "Postdoctoral Associate", image: "assets/kai_yu.jpg" },
-            { name: "Min Zeng", role: "Postdoctoral Associate", image: "assets/min_zeng.jpg" }
+            { name: "Jun Wang, PhD", role: "Postdoctoral Associate", image: "assets/jun_wang.jpg" },
+            { name: "Kai Yu, PhD", role: "Postdoctoral Associate", image: "assets/kai_yu.jpg" },
+            { name: "Min Zeng, PhD", role: "Postdoctoral Associate", image: "assets/min_zeng.jpg" }
         ],
         "Programmer": [
             { name: "Jeremy Yeung", role: "Programmer", image: "assets/jeremy_yeung.jpg" }
         ],
         "PhD Students": [
-            { name: "Huixue Zhou", role: "PhD Candidate", image: "assets/huixue_zhou.jpg" },
-            { name: "Yongkang Xiao", role: "PhD Student", image: "assets/yongkang_xiao.jpeg" },
-            { name: "Meijia Song", role: "PhD Student", image: "assets/meijia_song.jpg" },
-            { name: "Zaifu Zhan", role: "PhD Student", image: "assets/zaifu_zhan.jpg" },
-            { name: "Yifan Wu", role: "PhD Student", image: "assets/yifan_wu.jpg" }
+            { name: "Huixue Zhou", role: "PhD Candidate, Health Informatics", image: "assets/huixue_zhou.jpg" },
+            { name: "Yongkang Xiao", role: "PhD Student, Health Informatics", image: "assets/yongkang_xiao.jpeg" },
+            { name: "Meijia Song", role: "PhD Student, Nursing Informatics", image: "assets/meijia_song.jpg" },
+            { name: "Zaifu Zhan", role: "PhD Student, Electronic and Computer Engineering", image: "assets/zaifu_zhan.jpg" },
+            { name: "Yifan Wu", role: "PhD Student, Bioinformatics and Computational Biology", image: "assets/yifan_wu.jpg" }
         ],
         "Master Students": [
             { name: "Navanshu Khare", role: "MS Student", image: "assets/navanshu_khare.jpeg" },
